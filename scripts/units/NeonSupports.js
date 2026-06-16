@@ -7,66 +7,70 @@ function tryDo(func){
 }
 
 Events.on(ClientLoadEvent, b => {
+    let mainAccent = Color.valueOf("6cf5d7")
     UnitTypes.nova.weapons.each(w => {
-        tryDo(() => w.bullet.backColor = Color.valueOf("6cf5d7"))
+        tryDo(() => w.bullet.backColor = mainAccent)
     })
 
     UnitTypes.pulsar.weapons.each(w => {
-        tryDo(() => w.bullet.lightningColor = Color.valueOf("6cf5d7"))
-        tryDo(() => w.bullet.hitColor = Color.valueOf("6cf5d7"))
+        tryDo(() => w.bullet.lightningColor = mainAccent)
+        tryDo(() => w.bullet.hitColor = mainAccent)
     })
 
+    let extraAccent = Color.valueOf("6cf5d766")
     UnitTypes.quasar.weapons.each(w => {
         if(w.bullet instanceof LaserBulletType)
-            tryDo(() => w.bullet.colors = [Color.valueOf("6cf5d766"), Color.valueOf("6cf5d7"), Color.valueOf("ffffff")])
+            tryDo(() => w.bullet.colors = [extraAccent, mainAccent, Color.white])
     })
 
+    let darkerAccent = Color.valueOf("6cf5d733"), brigtherAccent = Color.valueOf("6cf5d7ff")
     UnitTypes.vela.weapons.each(w => {
         if(w.bullet instanceof ContinuousLaserBulletType)
-            tryDo(() => w.bullet.colors = [Color.valueOf("6cf5d733"), Color.valueOf("6cf5d77f"), Color.valueOf("6cf5d7"), Color.valueOf("ffffff")])
+            tryDo(() => w.bullet.colors = [darkerAccent, brigtherAccent, mainAccent, Color.white])
     })
 
     UnitTypes.corvus.weapons.each(w => {
         if(w.bullet instanceof LaserBulletType)
-            tryDo(() => UnitTypes.corvus.weapons.get(0).bullet.colors = [Color.valueOf("6cf5d766"), Color.valueOf("6cf5d7"), Color.valueOf("ffffff")])
+            tryDo(() => UnitTypes.corvus.weapons.get(0).bullet.colors = [extraAccent, mainAccent, Color.white])
 
-        tryDo(() => UnitTypes.corvus.weapons.get(0).bullet.lightColor = Color.valueOf("6cf5d7"))
-        tryDo(() => UnitTypes.corvus.weapons.get(0).bullet.lightningColor = Color.valueOf("6cf5d7"))
+        tryDo(() => UnitTypes.corvus.weapons.get(0).bullet.lightColor = mainAccent)
+        tryDo(() => UnitTypes.corvus.weapons.get(0).bullet.lightningColor = mainAccent)
     })
 
     UnitTypes.poly.weapons.each(w => {
-        tryDo(() => w.bullet.backColor = Color.valueOf("6cf5d7"))
-        tryDo(() => w.bullet.trailColor = Color.valueOf("6cf5d7"))
+        tryDo(() => w.bullet.backColor = mainAccent)
+        tryDo(() => w.bullet.trailColor = mainAccent)
     })
 
     UnitTypes.mega.weapons.each(w => {
-        tryDo(() => w.bullet.backColor = Color.valueOf("6cf5d7"))
+        tryDo(() => w.bullet.backColor = mainAccent)
     })
 
     UnitTypes.quad.weapons.each(w => {
-        tryDo(() => w.bullet.backColor = Color.valueOf("6cf5d7"))
+        tryDo(() => w.bullet.backColor = mainAccent)
     })
 
     UnitTypes.retusa.weapons.each(w => {
-        tryDo(() => w.bullet.backColor = Color.valueOf("6cf5d7"))
+        if(w instanceof RepairBeamWeapon) return
+        tryDo(() => w.bullet.backColor = mainAccent)
     })
 
     UnitTypes.cyerce.weapons.each(w => {
         if(w.bullet instanceof FlakBulletType){
-            tryDo(() => w.bullet.backColor = Color.valueOf("6cf5d7"))
-            tryDo(() => w.bullet.lightColor = Color.valueOf("6cf5d7"))
-            tryDo(() => w.bullet.hitEffect.waveColor = Color.valueOf("6cf5d7"))
-            tryDo(() => w.bullet.hitEffect.sparkColor = Color.valueOf("6cf5d7"))
-            tryDo(() => w.bullet.trailColor = Color.valueOf("6cf5d7"))
-            tryDo(() => w.bullet.fragBullet.backColor = Color.valueOf("6cf5d7"))
-            tryDo(() => w.bullet.fragBullet.lightColor = Color.valueOf("6cf5d7"))
-            tryDo(() => w.bullet.fragBullet.trailColor = Color.valueOf("6cf5d7"))
+            tryDo(() => w.bullet.backColor = mainAccent)
+            tryDo(() => w.bullet.lightColor = mainAccent)
+            tryDo(() => w.bullet.hitEffect.waveColor = mainAccent)
+            tryDo(() => w.bullet.hitEffect.sparkColor = mainAccent)
+            tryDo(() => w.bullet.trailColor = mainAccent)
+            tryDo(() => w.bullet.fragBullet.backColor = mainAccent)
+            tryDo(() => w.bullet.fragBullet.lightColor = mainAccent)
+            tryDo(() => w.bullet.fragBullet.trailColor = mainAccent)
         }
     })
 
     UnitTypes.navanax.weapons.each(w => {
         if(w.bullet instanceof ContinuousLaserBulletType)
-            tryDo(() => w.bullet.colors = [Color.valueOf("6cf5d733"), Color.valueOf("6cf5d77f"), Color.valueOf("6cf5d7"), Color.valueOf("ffffff")])
-        else tryDo(() => w.bullet.backColor = Color.valueOf("6cf5d7"))
+            tryDo(() => w.bullet.colors = [darkerAccent, brigtherAccent, mainAccent, Color.white])
+        else tryDo(() => w.bullet.backColor = mainAccent)
     })
 })

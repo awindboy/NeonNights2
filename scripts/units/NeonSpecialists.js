@@ -7,36 +7,39 @@ function tryDo(func){
 }
 
 Events.on(ClientLoadEvent, b => {
+    let mainAccent = Color.valueOf("f17afa")
     UnitTypes.spiroct.weapons.each(w => {
-        tryDo(() => w.bullet.hitColor = Color.valueOf("f17afa"))
-        tryDo(() => w.bullet.color = Color.valueOf("f17afa"))
+        tryDo(() => w.bullet.hitColor = mainAccent)
+        tryDo(() => w.bullet.color = mainAccent)
     })
 
+    let secondaryAccent = Color.valueOf("7343bf")
     UnitTypes.arkyid.weapons.each(w => {
         if(w.bullet instanceof SapBulletType){
-            tryDo(() => w.bullet.hitColor = Color.valueOf("f17afa"))
-            tryDo(() => w.bullet.color = Color.valueOf("f17afa"))
+            tryDo(() => w.bullet.hitColor = mainAccent)
+            tryDo(() => w.bullet.color = mainAccent)
         }else{
-            tryDo(() => w.bullet.frontColor = Color.valueOf("f17afa"))
-            tryDo(() => w.bullet.backColor = Color.valueOf("7343bf"))
-            tryDo(() => w.bullet.lightningColor = Color.valueOf("f17afa"))
-            tryDo(() => w.bullet.trailColor = Color.valueOf("7343bf"))
+            tryDo(() => w.bullet.frontColor = mainAccent)
+            tryDo(() => w.bullet.backColor = secondaryAccent)
+            tryDo(() => w.bullet.lightningColor = mainAccent)
+            tryDo(() => w.bullet.trailColor = secondaryAccent)
         }
     })
 
+    let darkerAccent = Color.valueOf("814c9e")
     UnitTypes.toxopid.weapons.each(w => {
         if(w.bullet instanceof ShrapnelBulletType){
-            tryDo(() => w.bullet.fromColor = Color.valueOf("f17afa"))
-            tryDo(() => w.bullet.toColor = Color.valueOf("7343bf"))
+            tryDo(() => w.bullet.fromColor = mainAccent)
+            tryDo(() => w.bullet.toColor = secondaryAccent)
         }else{
-            tryDo(() => w.bullet.frontColor = Color.valueOf("f17afa"))
-            tryDo(() => w.bullet.lightningColor = Color.valueOf("f17afa"))
-            tryDo(() => w.bullet.lightColor = Color.valueOf("814c9e"))
-            tryDo(() => w.bullet.trailColor = Color.valueOf("7343bf"))
-            tryDo(() => w.bullet.fragBullet.backColor = Color.valueOf("7343bf"))
-            tryDo(() => w.bullet.fragBullet.lightningColor = Color.valueOf("f17afa"))
-            tryDo(() => w.bullet.fragBullet.trailColor = Color.valueOf("7343bf"))
-            tryDo(() => w.bullet.fragBullet.lightColor = Color.valueOf("814c9e"))
+            tryDo(() => w.bullet.frontColor = mainAccent)
+            tryDo(() => w.bullet.lightningColor = mainAccent)
+            tryDo(() => w.bullet.lightColor = darkerAccent)
+            tryDo(() => w.bullet.trailColor = secondaryAccent)
+            tryDo(() => w.bullet.fragBullet.backColor = secondaryAccent)
+            tryDo(() => w.bullet.fragBullet.lightningColor = mainAccent)
+            tryDo(() => w.bullet.fragBullet.trailColor = secondaryAccent)
+            tryDo(() => w.bullet.fragBullet.lightColor = darkerAccent)
         }
     })
 })
