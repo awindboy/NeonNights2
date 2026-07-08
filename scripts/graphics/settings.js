@@ -3,8 +3,10 @@ let originalEngineColor = UnitTypes.alpha.engineColor, originalEngineColorInner 
 let engineColor = {
     yellowAccent: Color.valueOf("f99d49"),
     yellowInnerAccent: Color.valueOf("fbd172"),
+    
     orangeAccent: Color.valueOf("f17e4c"),
     orangeInnerAccent: Color.valueOf("ffc2a7"),
+    
     tealAccent: Color.valueOf("59cbba"),
     tealInnerAccent: Color.valueOf("acede8")
 } 
@@ -53,7 +55,6 @@ function coloredEngines(isEnabled) {
     colorEngines(serpuloOrangeUnits, isEnabled, engineColor.orangeAccent, engineColor.orangeInnerAccent);
 }
 
-//stolen!!!
 Events.on(ClientLoadEvent, () => {
     Vars.ui.settings.addCategory("@setting.nn-settings.name", Icon.settings, table => {
         table.check("@setting.engine-colors-serpulo.name", Core.settings.get("@setting.engine-colors-serpulo.name", false), value => {

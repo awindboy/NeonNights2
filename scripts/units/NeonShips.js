@@ -54,6 +54,7 @@ Events.on(ClientLoadEvent, b => {
         tryDo(() => a.particleColor = sparkAccent)
     })
     UnitTypes.quell.weapons.each(w => {
+        tryDo(() => w.bullet.trailColor = specialAccent)
         tryDo(() => w.bullet.fragBullet.spawnUnit.trailColor = specialAccent)
         tryDo(() => w.bullet.fragBullet.spawnUnit.engineColor = missileAccent)
     })
