@@ -1,4 +1,5 @@
 require("graphics/pal")
+require("graphics/settings")
 require("units/NeonSupports")
 require("units/NeonSpecialists")
 require("units/NeonShips")
