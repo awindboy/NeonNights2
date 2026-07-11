@@ -10,13 +10,16 @@ Events.on(ClientLoadEvent, b => {
     let mainAccent = Color.valueOf("f17afa"), secondaryAccent = Color.valueOf("d17aff")
     tryDo(() => UnitTypes.elude.parts.each(p => p.color = mainAccent))
     tryDo(() => UnitTypes.elude.abilities.each(a => a.color = mainAccent))
+
+    let engineAccent = Color.valueOf("c155ff"), innerAccent = Color.valueOf("eea4ff")
+    UnitTypes.elude.engineColor = engineAccent
+    UnitTypes.elude.engineColorInner = innerAccent
     UnitTypes.elude.weapons.each(w => {
         tryDo(() => w.bullet.backColor = secondaryAccent)
         tryDo(() => w.bullet.hitColor = secondaryAccent)
         tryDo(() => w.bullet.trailColor = secondaryAccent)
     })
 
-    let engineAccent = Color.valueOf("c155ff"), innerAccent = Color.valueOf("eea4ff")
     UnitTypes.avert.engineColor = engineAccent
     UnitTypes.avert.engineColorInner = innerAccent
     UnitTypes.avert.weapons.each(w => {
@@ -51,6 +54,7 @@ Events.on(ClientLoadEvent, b => {
         tryDo(() => a.particleColor = sparkAccent)
     })
     UnitTypes.quell.weapons.each(w => {
+        tryDo(() => w.bullet.trailColor = specialAccent)
         tryDo(() => w.bullet.fragBullet.spawnUnit.trailColor = specialAccent)
         tryDo(() => w.bullet.fragBullet.spawnUnit.engineColor = missileAccent)
     })
