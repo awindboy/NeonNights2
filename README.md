@@ -20,3 +20,6 @@ Original project: https://github.com/WMF-Industries/NeonNights2
   intentionally left unchanged.
 - Item icons are shared by belts, inventories and resource UI, so the same
   design is shown consistently in every one of those contexts.
+- Added explicit `item-*-ui` and `liquid-*-ui` atlas overrides so the Core
+  Database, block descriptions, research requirements and other UI panels use
+  the upgraded icons instead of the game's pregenerated vanilla UI regions.
