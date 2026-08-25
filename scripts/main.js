@@ -1,7 +1,0 @@
-require("graphics/pal")
-require("graphics/settings")
-require("units/NeonSupports")
-require("units/NeonSpecialists")
-require("units/NeonShips")
-require("units/NeonFlares")
-require("units/NeonBeetles")
