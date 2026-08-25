@@ -23,3 +23,7 @@ Original project: https://github.com/WMF-Industries/NeonNights2
 - Added explicit `item-*-ui` and `liquid-*-ui` atlas overrides so the Core
   Database, block descriptions, research requirements and other UI panels use
   the upgraded icons instead of the game's pregenerated vanilla UI regions.
+- Pregenerated build 159.7 block and unit composites from this fork's actual
+  layer overrides. Construction menus and the Core Database now use matching
+  `block-*-ui` / `unit-*-ui` icons, while construction previews and other
+  full-icon consumers use matching `block-*-full` / `unit-*-full` regions.
