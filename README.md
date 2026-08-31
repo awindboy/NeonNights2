@@ -1,14 +1,21 @@
-# NeonNights 2
-NeonNights is back, this time reworked from ground up!
-Thanks to Seddy, the original idea creator.
+# Depthforge
 
-## iPad compatibility fork
+Depthforge is an iPad-compatible visual overhaul for Mindustry build 159.7.
+It preserves the game's original silhouettes, palette and animation structure
+while adding richer material shading, structural depth, thinner seams and
+clearer separation between static and moving layers.
 
-This fork keeps every `sprites-override` texture from the upstream mod while
-removing its optional JavaScript color and settings hooks. The package is
-declared `iosCompatible` so it can be imported as a texture-only mod on iPad.
+## Origin and compatibility
+
+The project began as an iPad-compatible fork of NeonNights2 and has since been
+rebuilt across resources, distribution, drills, power, turrets, production,
+defense, campaign structures and units. It remains a texture-only package with
+no JavaScript hooks, and is declared `iosCompatible` for direct iPad import.
 
 Original project: https://github.com/WMF-Industries/NeonNights2
+
+Original concept by Seddy. Upstream work and contributions are credited to WMF
+Industries, Antlrr, Woop, Binonib, Alstocras and Blop.
 
 ## Resource sprite overhaul
 

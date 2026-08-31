@@ -1,21 +1,8 @@
 name: "NeonNights2"
-displayName: "[acid[]]Neon[[]][cyan[]]Nights[[]] [magenta[]]2[[]] - iPad TexturePack"
-author: WMF Industries
-description: "iPad-compatible texture-only fork. Makes Mindustry Dark Themed!
-
-Credits:
-• !ereHyddeS, for making this out of boredom
-• WMF, for annoying everyone long enough to rework it
-• Antlrr, for contributing lots
-• Woop, for contributing few
-• Binonib, for contributing few
-• Alstocras, for contributing few
-• Blop, for ideas and for meme dump
-
-Changelogs:
-• Included campaign-only blocks
-• NeonNights2: Erekir-ified coming maybe soon idk"
-version: "2.7.0-ios1"
+displayName: "[orange]Depth[lightgray]forge[] [gray]- Refined Texture Pack[]"
+author: "awindboy & WMF Industries"
+description: "iPad-compatible texture-only visual overhaul for Mindustry build 159.7. Preserves the original silhouettes and identification colors while adding refined materials, directional lighting, structural depth, thinner seams, and clearer animated layers. Based on NeonNights2 by WMF Industries and its contributors."
+version: "3.0.0-ios1"
 minGameVersion: "146"
 hidden: true
 iosCompatible: true
